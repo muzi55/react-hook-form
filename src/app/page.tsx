@@ -1,22 +1,18 @@
-import FormOne from "./components/FormOne";
-import FormTwo from "./components/FormTwo";
-import FormThree from "./components/FormThree";
-import FormFour from "./components/FormFour";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <h1>리액트 훅 폼 공부</h1>
-      <FormOne />
-      <hr />
-
-      <FormTwo />
-      <hr />
-
-      <FormThree />
-      <hr />
-
-      <FormFour />
+      <p>
+        <Link className="text-[30px] ml-8 bg-red-200" href={"study"}>
+          훅 사용예제
+        </Link>
+      </p>
+      <p>
+        <Link className="text-[30px] ml-8 bg-red-200" href="login1">
+          로그인1
+        </Link>
+      </p>
     </>
   );
 }
