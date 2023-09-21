@@ -1,19 +1,22 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+interface Form {
+  age: number;
+}
 
 const FormFour = (): JSX.Element => {
+  const [result, setResult] = useState<number>();
   const {
-    register,
     control,
     formState: { errors },
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (data) => {
-    //
-    console.log(data);
+  const onSubmit = (data: Form) => {
+    setResult(data.age);
   };
+
   return (
     <>
       <h2>에러메세지</h2>
@@ -29,6 +32,7 @@ const FormFour = (): JSX.Element => {
         {errors.age?.type === "required" && <p className="text-red-300">필수 입력값입니다.</p>}
         {errors.age?.type === "min" && <p className="text-red-300">5보다 커야합니다</p>}
         {errors.age?.type === "max" && <p className="text-red-300">99보다 작아야합니다.</p>}
+        {result && <p>결과값 : {result}</p>}
       </form>
     </>
   );
