@@ -1,6 +1,7 @@
 import FormOne from "./components/FormOne";
 import FormTwo from "./components/FormTwo";
 import FormThree from "./components/FormThree";
+import FormFour from "./components/FormFour";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
       <hr />
 
       <FormThree />
+      <hr />
+
+      <FormFour />
     </>
   );
 }
