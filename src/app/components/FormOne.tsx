@@ -13,7 +13,7 @@ const FormOne = (): JSX.Element => {
 
   return (
     <>
-      <h2>form one</h2>
+      <h2>리액트 훅 폼</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <input type="text" {...register("name")} />

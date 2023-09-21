@@ -15,10 +15,9 @@ const FormTwo = (): JSX.Element => {
       secondName: data.secondName,
     });
   };
-  console.log(result);
   return (
     <>
-      <h2>form one</h2>
+      <h2>셀렉트 박스</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <select {...register("firstName")}>
