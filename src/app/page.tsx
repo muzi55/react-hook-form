@@ -4,6 +4,11 @@ export default function Home() {
   return (
     <>
       <p>
+        <Link className="text-[30px] ml-8 bg-red-200" href={"example2"}>
+          훅 사용 로그인
+        </Link>
+      </p>
+      <p>
         <Link className="text-[30px] ml-8 bg-red-200" href={"study"}>
           훅 사용예제
         </Link>
